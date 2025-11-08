@@ -14,63 +14,76 @@
   <div class="bg" aria-hidden="true"></div>
   <div class="bg-overlay" aria-hidden="true"></div>
 
-  <!-- Верхняя панель с логотипом -->
+  <!-- Верхняя панель -->
   <header class="topbar" role="banner">
     <div class="container topbar-inner">
-      <div class="brand">
+      <!-- Левый блок: логотип и название -->
+      <div class="brand-row">
         <img src="123.jpg" alt="Лого сервера" class="logo-img">
+        <div class="brand-text">
+          <span class="server-name">M!di - 1.21.8</span>
+          <span class="server-tagline">Minecraft RP Server</span>
+        </div>
       </div>
-      <nav class="top-nav" role="navigation" aria-label="Главное меню">
-        <!-- кнопка темы убрана -->
-      </nav>
     </div>
   </header>
 
-  <!-- Основная карточка -->
+  <!-- Основной блок -->
   <main class="hero" role="main">
     <div class="hero-card">
+      <!-- Левая карточка: сервер -->
       <div class="hero-left">
         <h1 class="title">M!di 1.21.8</h1>
-        <p class="subtitle">Сервер Minecraft — выживание, мини-игры и ивенты. Присоединяйся прямо сейчас.</p>
-
-        <div class="actions">
-          <a class="btn btn-primary discord" href="https://disk.yandex.ru/d/Lh4qFmLZRqgynw" target="_blank">
-            Скачать сборку ➜
-          </a>
-          <a class="btn btn-primary discord" href="http://199.83.103.156:25630/" target="_blank">
-            Интерактивная карта ➜
-          </a>
-          <button class="btn btn-ghost copy-ip" id="copy-ip" title="Скопировать IP">Скопировать IP</button>
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-num" id="online-count">0</div>
+            <div class="stat-label">Онлайн</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num" id="record-count">0</div>
+            <div class="stat-label">Рекорд</div>
+          </div>
+          <div class="stat" id="server-status-block">
+            <span class="status-circle" id="status-circle"></span>
+            <span id="status-text">Загрузка...</span>
+          </div>
         </div>
-
-        <p class="hint">IP: <strong id="server-ip">m1di.cringe.team</strong></p>
       </div>
 
-      <aside class="hero-right" aria-hidden="true">
-        <div class="stat">
-          <div class="stat-num" id="online-count">5</div>
-          <div class="stat-label">Онлайн</div>
+      <!-- Правая карточка: IP и кнопки -->
+      <div class="hero-right">
+        <div class="ip-block">
+          <p>IP сервера:</p>
+          <strong id="server-ip">m1di.cringe.team</strong>
+          <button class="btn btn-ghost copy-ip" id="copy-ip" title="Скопировать IP">Скопировать IP</button>
         </div>
-        <div class="stat">
-          <div class="stat-num">5</div>
-          <div class="stat-label">Рекорд</div>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://disk.yandex.ru/d/Lh4qFmLZRqgynw" target="_blank">
+            Скачать сборку ➜
+          </a>
+          <a class="btn btn-primary" href="http://199.83.103.156:25630/" target="_blank">
+            Интерактивная карта ➜
+          </a>
+          <a class="btn btn-primary" href="https://discord.gg/DNgqkBRJUa" target="_blank">
+            <img src="123.jpg" alt="Discord Logo" class="discord-logo">
+            Discord ➜
+          </a>
         </div>
-      </aside>
+      </div>
     </div>
 
-    <!-- Блок правил -->
+    <!-- Правила -->
     <div class="rules">
       <h2>Правила проекта</h2>
       <p>Играя на сервере вы соглашаетесь с Discord ToS и Discord Community Guidelines</p>
       <ol>
-        <li>Запрещен гриф и предумышленные убийства на спавне (квадрат 400x400, центр 0 ~ 0)</li>
+        <li>Запрещен гриф и предумышленные убийства на спавне в зоне квадрата 400x400, центр 0 ~ 0)</li>
         <li>Игроки вправе объявлять свои правила на своих территориях</li>
         <li>Нельзя использовать запрещенные на Twitch'e выражения в чатах Minecraft и Discord</li>
         <li>Запрещена демонстрация шокирующего контента или символик</li>
       </ol>
       <p>Желаем приятной игры!</p>
     </div>
-
   </main>
 
   <script src="script.js"></script>
